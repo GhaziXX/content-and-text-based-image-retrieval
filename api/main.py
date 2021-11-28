@@ -11,7 +11,7 @@ es = ElasticSearch()
 app = FastAPI()
 
 def load_image_into_numpy_array(data):
-    return np.array(Image.open(BytesIO(data)))
+    return np.array(Image.open(data))
 
 @app.get("/")
 async def root():
@@ -39,7 +39,7 @@ async def image_query(image_id: Optional[str] = None,
     return es.search_by_image_query(image_id=image_id, image_link=image_link, image=x, condidates=condidates, size=size, from_=from_)
 
 @app.post("/api/v1/text_image_query")
-async def image_query(query: str, 
+async def text_image_query(query: str, 
                       fields: Optional[str] = '{"labels":5, "tags":1, "title":2}', 
                       use_fuzzy: Optional[bool] = False,
                       image_id: Optional[str] = None, 
