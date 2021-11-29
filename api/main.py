@@ -4,7 +4,7 @@ from fastapi import FastAPI, UploadFile, File
 import json
 import numpy as np
 from PIL import Image
-from io import BytesIO
+import uvicorn
 
 es = ElasticSearch()
 
@@ -35,7 +35,7 @@ async def image_query(image_id: Optional[str] = None,
                       from_: Optional[int] = 0,
                       condidates: Optional[int] = 100
                     ):
-    x = load_image_into_numpy_array(await image.read()) if image != [] else np.array([])
+    x = load_image_into_numpy_array(image.file) if image != [] else np.array([])
     return es.search_by_image_query(image_id=image_id, image_link=image_link, image=x, condidates=condidates, size=size, from_=from_)
 
 @app.post("/api/v1/text_image_query")
@@ -49,5 +49,8 @@ async def text_image_query(query: str,
                       from_: Optional[int] = 0,
                       condidates: Optional[int] = 100
                     ):
-    x = load_image_into_numpy_array(await image.read()) if image != [] else np.array([])
+    x = load_image_into_numpy_array(image.file) if image != [] else np.array([])
     return es.search_by_text_image_query(image_id=image_id, query=query, fields=json.loads(fields), use_fuzzy=use_fuzzy, image_link=image_link, image=x, condidates=condidates, size=size, from_=from_)
+
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="0.0.0.0", port=8080)
