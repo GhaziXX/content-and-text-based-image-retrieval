@@ -11,4 +11,4 @@ COPY . .
 
 EXPOSE 8501
 
-CMD ["streamlit", "serve", "main.py"]
+CMD ["streamlit", "run", "main.py"]
