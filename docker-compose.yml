@@ -5,6 +5,7 @@ services:
     build: frontend
     ports:
       - 8501:8501
+    network_mode: host
     depends_on:
       - api
     volumes:
@@ -13,5 +14,6 @@ services:
     build: api
     ports:
       - 8080:8080
+    network_mode: host
     volumes:
       - ./storage:/storage

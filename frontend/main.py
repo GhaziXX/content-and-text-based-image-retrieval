@@ -104,11 +104,10 @@ def init_view():
 
 def text_search_query(search_res_numbers, text_search, use_fuzzy, fields,from_):
     
-    fields = '{"labels":5, "tags":1, "title":2}' if fields == {} else fields
+    fields = '{"labels":5, "tags":1, "title":2}' if fields == {} or fields == '}' else fields
     
     headers = {'accept': 'application/json'}
     params = (('query', text_search),('fields', fields),('use_fuzzy', use_fuzzy),('size', str(search_res_numbers)),('from_', str(from_)),)
-    
     try:
         response = requests.get(f"http://localhost:8080/api/v1/text_query", headers=headers, params=params)
         results = response.json()

@@ -8,3 +8,4 @@ scikit-image
 pydantic
 python-multipart
 uvicorn
+scikit-learn
