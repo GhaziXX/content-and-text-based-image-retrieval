@@ -21,8 +21,8 @@ In order to reproduce the project you have to:
 2. Move to the project directory.
 3. Get the data index. This can be done in two methods:
     1. Create a new index
-        1. Execute `download_data.sh` under `data` folder to get the data.
-        2. Follow the indexing steps in `indexing.ipynb` notebook under `data-preparation` folder.
+        1. Execute [download_data.sh](data/download_data.sh) to get the data.
+        2. Follow the indexing steps in [indexing.ipynb](data-preparation/indexing.ipynb).
     2. Restore our index.
         1. Download the index. Link to be added.
         2. Go to ElasticSearch/config directory.
@@ -39,19 +39,6 @@ In order to reproduce the project you have to:
         `http://localhost:9200/_snapshot/open-images/snapshot_02_12_2021/_restore`
 
 5. Run `docker-compose up --build`
-
-
-cd elastic/config/es.yml
-add path.repo:[path_index/elasticsearch-backup]
-reload
-put : http://localhost:9200/_snapshot/open-images
-body : 
-
-
-restore : post 
-
-
-
 Once these steps are done, the web application should start in the browser.
 
 
@@ -74,5 +61,5 @@ Both of the API and frontend of the web application are containerized using Dock
 
 
 
-More about this process is available in this detailed [report](https://github.com/GhaziXX/content-and-text-based-image-retrieval/tree/master/docs).
+More about this process is available in this detailed [report](/docs).
 
