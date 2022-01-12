@@ -24,7 +24,7 @@ In order to reproduce the project you have to:
         1. Execute [download_data.sh](data/download_data.sh) to get the data.
         2. Follow the indexing steps in [indexing.ipynb](data-preparation/indexing.ipynb).
     2. Restore our index.
-        1. Download the index. Link to be added.
+        1. Download the index. https://drive.google.com/file/d/1HVr_i4XYx5uQ67B94pxX83g7ZD1kxOcf/view?usp=sharing.
         2. Go to ElasticSearch/config directory.
         3. open elasticsearch.yml and add the following line: <br /> `path.repo:[path_to_index/elasticsearch-backup]`
         4. Reload indexing using `PUT` request to <br /> `http://localhost:9200/_snapshot/open-images` and the following header <br />
