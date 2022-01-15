@@ -8,7 +8,7 @@
     <a href="#getting-started">Getting started</a> |
     <a href="#pipeline">Pipeline</a> |
     <a href="#deployment">Deployment</a> |
-    <a href="#contribution">Contribution</a> |
+    <a href="#contribution">Contribution</a>
   </h4>
 </div>
 <br>
