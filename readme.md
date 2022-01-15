@@ -59,7 +59,9 @@ The web application is developed using:
 ### Deployment
 Both of the API and frontend of the web application are containerized using Docker and docker-compose.
 
-
-
 More about this process is available in this detailed [report](/docs).
 
+## Contribution
+<a href="https://github.com/GhaziXX/Home-Automation-using-CoT/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=GhaziXX/content-and-text-based-image-retrieval" width=100/>
+</a>
