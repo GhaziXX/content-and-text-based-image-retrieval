@@ -1,9 +1,22 @@
-# Content and Text Based Image Retrieval Search Engine
-## About the project
+<h1 align="center">
+  <br>
+  Content and Text Based Image Retrieval Search Engine
+</h1>
+<div align="center">
+  <h4>
+    <a href="#context">Context</a> |
+    <a href="#getting-started">Getting started</a> |
+    <a href="#pipeline">Pipeline</a> |
+    <a href="#deployment">Deployment</a> |
+    <a href="#contribution">Contribution</a> |
+  </h4>
+</div>
+<br>
+
+## Context
 An image search engine that covers over 2 million annotated images from [Open Images Dataset](https://storage.googleapis.com/openimages/web/index.html). This search engine enables its users to search using text, images or a combination of both.
 
 ![home page](images/home.png)
-
 
 
 ## Getting started
@@ -42,7 +55,7 @@ In order to reproduce the project you have to:
 Once these steps are done, the web application should start in the browser.
 
 
-## Project process
+## Pipeline
 This project is brought down into 4 steps:
 ### Data processing
 ![data processing pipeline](images/dataset.jpg)
@@ -62,6 +75,6 @@ Both of the API and frontend of the web application are containerized using Dock
 More about this process is available in this detailed [report](/docs).
 
 ## Contribution
-<a href="https://github.com/GhaziXX/Home-Automation-using-CoT/graphs/contributors">
+<a href="https://github.com/GhaziXX/content-and-text-based-image-retrieval/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=GhaziXX/content-and-text-based-image-retrieval" width=100/>
 </a>
